@@ -1,4 +1,4 @@
-# Noto earthquake logistics: final V13 reproducibility package
+# Operational-Rule Sensitivity of Reliability in an Earthquake-Inspired Emergency Logistics Model
 
 This repository contains the **final V13** input data, Python code, numerical results, and figures for the manuscript's *Numerical experiments* section. The manuscript and supporting material are not included. All paths below are relative to the repository root.
 
