@@ -1,4 +1,4 @@
-# Noto earthquake logistics: final V13 package
+# Noto earthquake logistics
 
 This repository contains only the final V13 code, input data, numerical results and figures. The manuscript and supporting material are not hosted here.
 
