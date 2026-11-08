@@ -1,0 +1,24 @@
+{
+  "source_directory": "data/v13_structure_20261107",
+  "files": [
+    "figs/v13_structure/network.pdf",
+    "figs/v13_structure/network.png",
+    "figs/v13_structure/mechanisms.pdf",
+    "figs/v13_structure/mechanisms.png",
+    "figs/v13_structure/thresholds.pdf",
+    "figs/v13_structure/thresholds.png",
+    "figs/v13_structure/crossing_times.pdf",
+    "figs/v13_structure/crossing_times.png",
+    "figs/v13_structure/factorial.pdf",
+    "figs/v13_structure/factorial.png",
+    "figs/v13_structure/grids.pdf",
+    "figs/v13_structure/grids.png",
+    "figs/v13_structure/cv.pdf",
+    "figs/v13_structure/cv.png",
+    "figs/v13_structure/joint_trace.pdf",
+    "figs/v13_structure/joint_trace.png",
+    "figs/v13_structure/closed_loop.pdf",
+    "figs/v13_structure/closed_loop.png"
+  ],
+  "note": "Empirical trajectory bands: 5th\u201395th percentiles; reliability bars: Wilson 95% intervals; events include 72 h."
+}

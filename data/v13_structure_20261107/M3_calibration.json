@@ -1,0 +1,210 @@
+{
+  "N": 64,
+  "seed": 999,
+  "components": {
+    "AN": {
+      "lambda": 9.79531894665315e-05,
+      "target_health_loss": 0.006995296462043111,
+      "matched_health_loss": 0.006995296462043147,
+      "residual": 3.5561831257524545e-17
+    },
+    "HK": {
+      "lambda": 5.06061651956763e-06,
+      "target_health_loss": 0.00037294112120134747,
+      "matched_health_loss": 0.0003729411212015193,
+      "residual": 1.7184604433895245e-16
+    },
+    "KZ": {
+      "lambda": 1.918639992351111e-05,
+      "target_health_loss": 0.0013713785258873297,
+      "matched_health_loss": 0.0013713785258436609,
+      "residual": -4.3668844582067656e-14
+    },
+    "NN": {
+      "lambda": 9.648381740394484e-06,
+      "target_health_loss": 0.0007324758581633032,
+      "matched_health_loss": 0.0007324758581633031,
+      "residual": -1.0842021724855044e-19
+    },
+    "NT": {
+      "lambda": 0.002752748576928765,
+      "target_health_loss": 0.1987281393082243,
+      "matched_health_loss": 0.19872813930822458,
+      "residual": 2.7755575615628914e-16
+    },
+    "SK": {
+      "lambda": 0.0007546024204372031,
+      "target_health_loss": 0.054562566675119745,
+      "matched_health_loss": 0.0545625666751694,
+      "residual": 4.9654724776360126e-14
+    },
+    "SZ": {
+      "lambda": 0.0016459287609255223,
+      "target_health_loss": 0.11866818637499929,
+      "matched_health_loss": 0.1186681863749995,
+      "residual": 2.0816681711721685e-16
+    },
+    "WJ": {
+      "lambda": 0.003770161756158132,
+      "target_health_loss": 0.27003351745444304,
+      "matched_health_loss": 0.270033517454443,
+      "residual": -5.551115123125783e-17
+    },
+    "AN-NN": {
+      "lambda": 0.0,
+      "target_health_loss": 0.0,
+      "matched_health_loss": 0.0,
+      "residual": 0.0
+    },
+    "AN-NT": {
+      "lambda": 1.389038066049121e-05,
+      "target_health_loss": 0.0009678068894382113,
+      "matched_health_loss": 0.0009678068894382363,
+      "residual": 2.4936649967166602e-17
+    },
+    "AN-SK": {
+      "lambda": 1.6220622365422824e-08,
+      "target_health_loss": 6.086194036993703e-07,
+      "matched_health_loss": 6.086194028107465e-07,
+      "residual": -8.886237472721442e-16
+    },
+    "AN-WJ": {
+      "lambda": 3.7509743794203643e-06,
+      "target_health_loss": 0.00028112604847471863,
+      "matched_health_loss": 0.00028112604847471917,
+      "residual": 5.421010862427522e-19
+    },
+    "HK-KZ": {
+      "lambda": 0.0,
+      "target_health_loss": 0.0,
+      "matched_health_loss": 0.0,
+      "residual": 0.0
+    },
+    "HK-SK": {
+      "lambda": 8.202986062396115e-07,
+      "target_health_loss": 4.684413373354408e-05,
+      "matched_health_loss": 4.6844133733544076e-05,
+      "residual": -6.776263578034403e-21
+    },
+    "KZ-HK": {
+      "lambda": 3.283669543536593e-06,
+      "target_health_loss": 0.0002372389338518785,
+      "matched_health_loss": 0.00023723893385187871,
+      "residual": 2.168404344971009e-19
+    },
+    "KZ-NN": {
+      "lambda": 1.1589564278723365e-05,
+      "target_health_loss": 0.0008079986956461629,
+      "matched_health_loss": 0.0008079986956460836,
+      "residual": -7.936359902593892e-17
+    },
+    "KZ-SK": {
+      "lambda": 1.0310003040450727e-06,
+      "target_health_loss": 8.279848412866102e-05,
+      "matched_health_loss": 8.279848412866306e-05,
+      "residual": 2.0464316005663896e-18
+    },
+    "NN-AN": {
+      "lambda": 7.332821353673954e-06,
+      "target_health_loss": 0.0005810566764512977,
+      "matched_health_loss": 0.0005810566764513157,
+      "residual": 1.7997756063259374e-17
+    },
+    "NN-KZ": {
+      "lambda": 0.0,
+      "target_health_loss": 0.0,
+      "matched_health_loss": 0.0,
+      "residual": 0.0
+    },
+    "NN-SK": {
+      "lambda": 1.6738425524872345e-06,
+      "target_health_loss": 8.912194247233298e-05,
+      "matched_health_loss": 8.912194247233664e-05,
+      "residual": 3.6591823321385775e-18
+    },
+    "NT-AN": {
+      "lambda": 0.0,
+      "target_health_loss": 0.0,
+      "matched_health_loss": 0.0,
+      "residual": 0.0
+    },
+    "NT-SZ": {
+      "lambda": 0.00010347935278275402,
+      "target_health_loss": 0.0073163547935724636,
+      "matched_health_loss": 0.00731635479357962,
+      "residual": 7.156601700142318e-15
+    },
+    "NT-WJ": {
+      "lambda": 5.89214165544566e-07,
+      "target_health_loss": 4.116027305348991e-05,
+      "matched_health_loss": 4.116027307850522e-05,
+      "residual": 2.5015308834780425e-14
+    },
+    "SK-AN": {
+      "lambda": 1.7146916837361227e-06,
+      "target_health_loss": 0.00011896901806440676,
+      "matched_health_loss": 0.0001189690180646516,
+      "residual": 2.4483995560153904e-16
+    },
+    "SK-HK": {
+      "lambda": 0.0,
+      "target_health_loss": 0.0,
+      "matched_health_loss": 0.0,
+      "residual": 0.0
+    },
+    "SK-KZ": {
+      "lambda": 0.0,
+      "target_health_loss": 0.0,
+      "matched_health_loss": 0.0,
+      "residual": 0.0
+    },
+    "SK-NN": {
+      "lambda": 1.1071749695856126e-07,
+      "target_health_loss": 5.819894068869076e-06,
+      "matched_health_loss": 5.8198940990868825e-06,
+      "residual": 3.021780637264002e-14
+    },
+    "SK-WJ": {
+      "lambda": 7.155909271486027e-06,
+      "target_health_loss": 0.0005365973213607442,
+      "matched_health_loss": 0.0005365973213607443,
+      "residual": 1.0842021724855044e-19
+    },
+    "SZ-NT": {
+      "lambda": 0.0,
+      "target_health_loss": 0.0,
+      "matched_health_loss": 0.0,
+      "residual": 0.0
+    },
+    "SZ-WJ": {
+      "lambda": 0.0,
+      "target_health_loss": 0.0,
+      "matched_health_loss": 0.0,
+      "residual": 0.0
+    },
+    "WJ-AN": {
+      "lambda": 1.329049545140448e-10,
+      "target_health_loss": 1.734723475976807e-17,
+      "matched_health_loss": 1.7343490913756084e-17,
+      "residual": -3.7438460119873384e-21
+    },
+    "WJ-NT": {
+      "lambda": 3.391233839060718e-07,
+      "target_health_loss": 2.8674933835743342e-05,
+      "matched_health_loss": 2.8674933798321406e-05,
+      "residual": -3.742193593848572e-14
+    },
+    "WJ-SK": {
+      "lambda": 1.4444760990563242e-08,
+      "target_health_loss": 1.744091583638814e-06,
+      "matched_health_loss": 1.744091584135874e-06,
+      "residual": 4.97059897514268e-16
+    },
+    "WJ-SZ": {
+      "lambda": 9.727884029552741e-07,
+      "target_health_loss": 7.322824385477388e-05,
+      "matched_health_loss": 7.322824385507597e-05,
+      "residual": 3.0208583030877367e-16
+    }
+  }
+}

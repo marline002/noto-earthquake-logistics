@@ -1,0 +1,470 @@
+[
+  {
+    "curvature": 0.01,
+    "horizon": 48,
+    "delayed": false,
+    "threshold": 0.15,
+    "N": 256,
+    "R_sys": 0.81640625,
+    "R_dc": 0.90234375,
+    "wilson_dc": [
+      0.8598151377544601,
+      0.9329759777778466
+    ]
+  },
+  {
+    "curvature": 0.01,
+    "horizon": 48,
+    "delayed": false,
+    "threshold": 0.2,
+    "N": 256,
+    "R_sys": 0.81640625,
+    "R_dc": 0.95703125,
+    "wilson_dc": [
+      0.9247089445363343,
+      0.9758401866993924
+    ]
+  },
+  {
+    "curvature": 0.01,
+    "horizon": 48,
+    "delayed": false,
+    "threshold": 0.25,
+    "N": 256,
+    "R_sys": 0.81640625,
+    "R_dc": 0.96875,
+    "wilson_dc": [
+      0.9395583934922568,
+      0.9840817411084887
+    ]
+  },
+  {
+    "curvature": 0.01,
+    "horizon": 48,
+    "delayed": true,
+    "threshold": 0.15,
+    "N": 256,
+    "R_sys": 0.0,
+    "R_dc": 0.90234375,
+    "wilson_dc": [
+      0.8598151377544601,
+      0.9329759777778466
+    ]
+  },
+  {
+    "curvature": 0.01,
+    "horizon": 48,
+    "delayed": true,
+    "threshold": 0.2,
+    "N": 256,
+    "R_sys": 0.0,
+    "R_dc": 0.95703125,
+    "wilson_dc": [
+      0.9247089445363343,
+      0.9758401866993924
+    ]
+  },
+  {
+    "curvature": 0.01,
+    "horizon": 48,
+    "delayed": true,
+    "threshold": 0.25,
+    "N": 256,
+    "R_sys": 0.0,
+    "R_dc": 0.96875,
+    "wilson_dc": [
+      0.9395583934922568,
+      0.9840817411084887
+    ]
+  },
+  {
+    "curvature": 0.01,
+    "horizon": 72,
+    "delayed": false,
+    "threshold": 0.15,
+    "N": 256,
+    "R_sys": 0.76953125,
+    "R_dc": 0.85546875,
+    "wilson_dc": [
+      0.8071377780781674,
+      0.8932893239940645
+    ]
+  },
+  {
+    "curvature": 0.01,
+    "horizon": 72,
+    "delayed": false,
+    "threshold": 0.2,
+    "N": 256,
+    "R_sys": 0.76953125,
+    "R_dc": 0.91796875,
+    "wilson_dc": [
+      0.8778567119259035,
+      0.9457224080930946
+    ]
+  },
+  {
+    "curvature": 0.01,
+    "horizon": 72,
+    "delayed": false,
+    "threshold": 0.25,
+    "N": 256,
+    "R_sys": 0.76953125,
+    "R_dc": 0.9609375,
+    "wilson_dc": [
+      0.9296001682001327,
+      0.9786459641572671
+    ]
+  },
+  {
+    "curvature": 0.01,
+    "horizon": 72,
+    "delayed": true,
+    "threshold": 0.15,
+    "N": 256,
+    "R_sys": 0.0,
+    "R_dc": 0.85546875,
+    "wilson_dc": [
+      0.8071377780781674,
+      0.8932893239940645
+    ]
+  },
+  {
+    "curvature": 0.01,
+    "horizon": 72,
+    "delayed": true,
+    "threshold": 0.2,
+    "N": 256,
+    "R_sys": 0.0,
+    "R_dc": 0.91796875,
+    "wilson_dc": [
+      0.8778567119259035,
+      0.9457224080930946
+    ]
+  },
+  {
+    "curvature": 0.01,
+    "horizon": 72,
+    "delayed": true,
+    "threshold": 0.25,
+    "N": 256,
+    "R_sys": 0.0,
+    "R_dc": 0.9609375,
+    "wilson_dc": [
+      0.9296001682001327,
+      0.9786459641572671
+    ]
+  },
+  {
+    "curvature": 0.02,
+    "horizon": 48,
+    "delayed": false,
+    "threshold": 0.15,
+    "N": 256,
+    "R_sys": 0.81640625,
+    "R_dc": 0.91796875,
+    "wilson_dc": [
+      0.8778567119259035,
+      0.9457224080930946
+    ]
+  },
+  {
+    "curvature": 0.02,
+    "horizon": 48,
+    "delayed": false,
+    "threshold": 0.2,
+    "N": 256,
+    "R_sys": 0.81640625,
+    "R_dc": 0.95703125,
+    "wilson_dc": [
+      0.9247089445363343,
+      0.9758401866993924
+    ]
+  },
+  {
+    "curvature": 0.02,
+    "horizon": 48,
+    "delayed": false,
+    "threshold": 0.25,
+    "N": 256,
+    "R_sys": 0.81640625,
+    "R_dc": 0.98828125,
+    "wilson_dc": [
+      0.9661184273321177,
+      0.9960067128769923
+    ]
+  },
+  {
+    "curvature": 0.02,
+    "horizon": 48,
+    "delayed": true,
+    "threshold": 0.15,
+    "N": 256,
+    "R_sys": 0.0,
+    "R_dc": 0.9140625,
+    "wilson_dc": [
+      0.8733176979335919,
+      0.9425644209637334
+    ]
+  },
+  {
+    "curvature": 0.02,
+    "horizon": 48,
+    "delayed": true,
+    "threshold": 0.2,
+    "N": 256,
+    "R_sys": 0.0,
+    "R_dc": 0.95703125,
+    "wilson_dc": [
+      0.9247089445363343,
+      0.9758401866993924
+    ]
+  },
+  {
+    "curvature": 0.02,
+    "horizon": 48,
+    "delayed": true,
+    "threshold": 0.25,
+    "N": 256,
+    "R_sys": 0.0,
+    "R_dc": 0.98828125,
+    "wilson_dc": [
+      0.9661184273321177,
+      0.9960067128769923
+    ]
+  },
+  {
+    "curvature": 0.02,
+    "horizon": 72,
+    "delayed": false,
+    "threshold": 0.15,
+    "N": 256,
+    "R_sys": 0.7734375,
+    "R_dc": 0.90234375,
+    "wilson_dc": [
+      0.8598151377544601,
+      0.9329759777778466
+    ]
+  },
+  {
+    "curvature": 0.02,
+    "horizon": 72,
+    "delayed": false,
+    "threshold": 0.2,
+    "N": 256,
+    "R_sys": 0.7734375,
+    "R_dc": 0.95703125,
+    "wilson_dc": [
+      0.9247089445363343,
+      0.9758401866993924
+    ]
+  },
+  {
+    "curvature": 0.02,
+    "horizon": 72,
+    "delayed": false,
+    "threshold": 0.25,
+    "N": 256,
+    "R_sys": 0.7734375,
+    "R_dc": 0.9921875,
+    "wilson_dc": [
+      0.9719672316984642,
+      0.9978549096323186
+    ]
+  },
+  {
+    "curvature": 0.02,
+    "horizon": 72,
+    "delayed": true,
+    "threshold": 0.15,
+    "N": 256,
+    "R_sys": 0.0,
+    "R_dc": 0.90234375,
+    "wilson_dc": [
+      0.8598151377544601,
+      0.9329759777778466
+    ]
+  },
+  {
+    "curvature": 0.02,
+    "horizon": 72,
+    "delayed": true,
+    "threshold": 0.2,
+    "N": 256,
+    "R_sys": 0.0,
+    "R_dc": 0.95703125,
+    "wilson_dc": [
+      0.9247089445363343,
+      0.9758401866993924
+    ]
+  },
+  {
+    "curvature": 0.02,
+    "horizon": 72,
+    "delayed": true,
+    "threshold": 0.25,
+    "N": 256,
+    "R_sys": 0.0,
+    "R_dc": 0.9921875,
+    "wilson_dc": [
+      0.9719672316984642,
+      0.9978549096323186
+    ]
+  },
+  {
+    "curvature": 0.04,
+    "horizon": 48,
+    "delayed": false,
+    "threshold": 0.15,
+    "N": 256,
+    "R_sys": 0.8203125,
+    "R_dc": 0.95703125,
+    "wilson_dc": [
+      0.9247089445363343,
+      0.9758401866993924
+    ]
+  },
+  {
+    "curvature": 0.04,
+    "horizon": 48,
+    "delayed": false,
+    "threshold": 0.2,
+    "N": 256,
+    "R_sys": 0.8203125,
+    "R_dc": 0.98828125,
+    "wilson_dc": [
+      0.9661184273321177,
+      0.9960067128769923
+    ]
+  },
+  {
+    "curvature": 0.04,
+    "horizon": 48,
+    "delayed": false,
+    "threshold": 0.25,
+    "N": 256,
+    "R_sys": 0.8203125,
+    "R_dc": 1.0,
+    "wilson_dc": [
+      0.9852161435741286,
+      0.9999999999999999
+    ]
+  },
+  {
+    "curvature": 0.04,
+    "horizon": 48,
+    "delayed": true,
+    "threshold": 0.15,
+    "N": 256,
+    "R_sys": 0.0,
+    "R_dc": 0.95703125,
+    "wilson_dc": [
+      0.9247089445363343,
+      0.9758401866993924
+    ]
+  },
+  {
+    "curvature": 0.04,
+    "horizon": 48,
+    "delayed": true,
+    "threshold": 0.2,
+    "N": 256,
+    "R_sys": 0.0,
+    "R_dc": 0.98828125,
+    "wilson_dc": [
+      0.9661184273321177,
+      0.9960067128769923
+    ]
+  },
+  {
+    "curvature": 0.04,
+    "horizon": 48,
+    "delayed": true,
+    "threshold": 0.25,
+    "N": 256,
+    "R_sys": 0.0,
+    "R_dc": 1.0,
+    "wilson_dc": [
+      0.9852161435741286,
+      0.9999999999999999
+    ]
+  },
+  {
+    "curvature": 0.04,
+    "horizon": 72,
+    "delayed": false,
+    "threshold": 0.15,
+    "N": 256,
+    "R_sys": 0.76953125,
+    "R_dc": 0.9609375,
+    "wilson_dc": [
+      0.9296001682001327,
+      0.9786459641572671
+    ]
+  },
+  {
+    "curvature": 0.04,
+    "horizon": 72,
+    "delayed": false,
+    "threshold": 0.2,
+    "N": 256,
+    "R_sys": 0.76953125,
+    "R_dc": 1.0,
+    "wilson_dc": [
+      0.9852161435741286,
+      0.9999999999999999
+    ]
+  },
+  {
+    "curvature": 0.04,
+    "horizon": 72,
+    "delayed": false,
+    "threshold": 0.25,
+    "N": 256,
+    "R_sys": 0.76953125,
+    "R_dc": 1.0,
+    "wilson_dc": [
+      0.9852161435741286,
+      0.9999999999999999
+    ]
+  },
+  {
+    "curvature": 0.04,
+    "horizon": 72,
+    "delayed": true,
+    "threshold": 0.15,
+    "N": 256,
+    "R_sys": 0.0,
+    "R_dc": 0.9609375,
+    "wilson_dc": [
+      0.9296001682001327,
+      0.9786459641572671
+    ]
+  },
+  {
+    "curvature": 0.04,
+    "horizon": 72,
+    "delayed": true,
+    "threshold": 0.2,
+    "N": 256,
+    "R_sys": 0.0,
+    "R_dc": 1.0,
+    "wilson_dc": [
+      0.9852161435741286,
+      0.9999999999999999
+    ]
+  },
+  {
+    "curvature": 0.04,
+    "horizon": 72,
+    "delayed": true,
+    "threshold": 0.25,
+    "N": 256,
+    "R_sys": 0.0,
+    "R_dc": 1.0,
+    "wilson_dc": [
+      0.9852161435741286,
+      0.9999999999999999
+    ]
+  }
+]

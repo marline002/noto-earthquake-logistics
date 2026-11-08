@@ -1,0 +1,77 @@
+{
+  "throughput_M4": {
+    "load_driver": "throughput",
+    "pi": "frozen_split"
+  },
+  "throughput_M5": {
+    "load_driver": "throughput",
+    "m": "link_only"
+  },
+  "throughput_M6": {
+    "load_driver": "throughput",
+    "m": "node_only"
+  },
+  "throughput_fastest": {
+    "load_driver": "throughput",
+    "pi": "fastest"
+  },
+  "cap_only_M4": {
+    "delivery_rule": "cap",
+    "pi": "frozen_split"
+  },
+  "cap_only_M5": {
+    "delivery_rule": "cap",
+    "m": "link_only"
+  },
+  "cap_only_M6": {
+    "delivery_rule": "cap",
+    "m": "node_only"
+  },
+  "cap_only_fastest": {
+    "delivery_rule": "cap",
+    "pi": "fastest"
+  },
+  "delayed_M4": {
+    "arrival_delay": true,
+    "pi": "frozen_split"
+  },
+  "delayed_M5": {
+    "arrival_delay": true,
+    "m": "link_only"
+  },
+  "delayed_M6": {
+    "arrival_delay": true,
+    "m": "node_only"
+  },
+  "delayed_fastest": {
+    "arrival_delay": true,
+    "pi": "fastest"
+  },
+  "combined_M4": {
+    "load_driver": "throughput",
+    "delivery_rule": "cap",
+    "arrival_delay": true,
+    "pi": "frozen_split"
+  },
+  "combined_M5": {
+    "load_driver": "throughput",
+    "delivery_rule": "cap",
+    "arrival_delay": true,
+    "m": "link_only"
+  },
+  "combined_M6": {
+    "load_driver": "throughput",
+    "delivery_rule": "cap",
+    "arrival_delay": true,
+    "m": "node_only"
+  },
+  "combined_fastest": {
+    "load_driver": "throughput",
+    "delivery_rule": "cap",
+    "arrival_delay": true,
+    "pi": "fastest"
+  },
+  "trace_M0": {
+    "return_diagnostics": true
+  }
+}

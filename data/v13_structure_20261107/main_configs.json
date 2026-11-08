@@ -1,0 +1,102 @@
+{
+  "M0": {},
+  "M1": {
+    "m": "soft_mean"
+  },
+  "M2": {
+    "m": "static"
+  },
+  "M3": {
+    "m": "exogenous_matched",
+    "lambda_bar": {
+      "AN": 9.79531894665315e-05,
+      "HK": 5.06061651956763e-06,
+      "KZ": 1.918639992351111e-05,
+      "NN": 9.648381740394484e-06,
+      "NT": 0.002752748576928765,
+      "SK": 0.0007546024204372031,
+      "SZ": 0.0016459287609255223,
+      "WJ": 0.003770161756158132,
+      "AN-NN": 0.0,
+      "AN-NT": 1.389038066049121e-05,
+      "AN-SK": 1.6220622365422824e-08,
+      "AN-WJ": 3.7509743794203643e-06,
+      "HK-KZ": 0.0,
+      "HK-SK": 8.202986062396115e-07,
+      "KZ-HK": 3.283669543536593e-06,
+      "KZ-NN": 1.1589564278723365e-05,
+      "KZ-SK": 1.0310003040450727e-06,
+      "NN-AN": 7.332821353673954e-06,
+      "NN-KZ": 0.0,
+      "NN-SK": 1.6738425524872345e-06,
+      "NT-AN": 0.0,
+      "NT-SZ": 0.00010347935278275402,
+      "NT-WJ": 5.89214165544566e-07,
+      "SK-AN": 1.7146916837361227e-06,
+      "SK-HK": 0.0,
+      "SK-KZ": 0.0,
+      "SK-NN": 1.1071749695856126e-07,
+      "SK-WJ": 7.155909271486027e-06,
+      "SZ-NT": 0.0,
+      "SZ-WJ": 0.0,
+      "WJ-AN": 1.329049545140448e-10,
+      "WJ-NT": 3.391233839060718e-07,
+      "WJ-SK": 1.4444760990563242e-08,
+      "WJ-SZ": 9.727884029552741e-07
+    }
+  },
+  "M4": {
+    "pi": "frozen_split"
+  },
+  "M5": {
+    "m": "link_only"
+  },
+  "M6": {
+    "m": "node_only"
+  },
+  "soft_fastest": {
+    "pi": "fastest"
+  },
+  "binary_split": {
+    "m": "binary"
+  },
+  "binary_fastest": {
+    "pi": "fastest",
+    "m": "binary"
+  },
+  "throughput": {
+    "load_driver": "throughput"
+  },
+  "cap_only": {
+    "delivery_rule": "cap"
+  },
+  "delayed": {
+    "arrival_delay": true
+  },
+  "combined": {
+    "load_driver": "throughput",
+    "delivery_rule": "cap",
+    "arrival_delay": true
+  },
+  "shared_road": {
+    "shared_roads": true
+  },
+  "static_cap": {
+    "m": "static",
+    "delivery_rule": "cap"
+  },
+  "static_cap_fastest": {
+    "pi": "fastest",
+    "m": "static",
+    "delivery_rule": "cap"
+  },
+  "closure_stress": {
+    "initial_closed": [
+      "WJ-SZ",
+      "SZ-WJ"
+    ]
+  },
+  "legacy_M0": {
+    "original_inputs": true
+  }
+}
