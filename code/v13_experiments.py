@@ -1,14 +1,14 @@
 from pathlib import Path
 import os,sys,json,hashlib,importlib.util
 os.environ['OPENBLAS_NUM_THREADS']='1'
-ROOT=Path(__file__).resolve().parents[1]; OUT=ROOT/'data'/'v13_20261107'; OUT.mkdir(exist_ok=True)
-sys.path.insert(0,str(ROOT/'data'))
+ROOT=Path(__file__).resolve().parents[1]; OUT=ROOT/'result'/'v13_20261107'; OUT.mkdir(exist_ok=True); INPUT=ROOT/'data'/'v13_20261107'/'inputs'
+sys.path.insert(0,str(ROOT/'code'))
 import numpy as np
 import pandas as pd
 from concurrent.futures import ProcessPoolExecutor
 from scipy.stats import beta
-original=ROOT/'data'/'v13_core.py'
-model=OUT/'v13_model.py'
+original=ROOT/'code'/'v13_core.py'
+model=ROOT/'code'/'v13_model.py'
 def prepare():
  s=original.read_text(encoding='utf-8')
  s=s.replace('shared_roads=False, initial_closed=()):','shared_roads=False, initial_closed=(), initial_stock_hours=0., retry_hours=None):')
@@ -38,10 +38,10 @@ def prepare():
  # Geometric lower bounds are an explicitly changed scenario, not original measured routes.
  import run_v13_structure as r
  os.environ['NOTO_REVISION_MODE']='geometry'
- r.OUT=OUT; r.INPUT=OUT/'inputs';r.prepare_inputs()
+ r.OUT=OUT; r.INPUT=INPUT;r.prepare_inputs()
 
 def load():
- spec=importlib.util.spec_from_file_location('v13_model',model);w=importlib.util.module_from_spec(spec);spec.loader.exec_module(w);w.load_data(OUT/'inputs');return w
+ spec=importlib.util.spec_from_file_location('v13_model',model);w=importlib.util.module_from_spec(spec);spec.loader.exec_module(w);w.load_data(INPUT);return w
 def job(task):
  label,s,kw=task;w=load();kw=dict(kw);dt=kw.get('Delta_t_R',3.)
  stock=sum(w.DEMAND_D.values())/3*12
@@ -76,6 +76,6 @@ if __name__=='__main__':
   summaries.append(row)
  pd.DataFrame(summaries).to_csv(OUT/'mission_summary.csv',index=False);pd.DataFrame(contrasts).to_csv(OUT/'mission_contrasts.csv',index=False)
  (OUT/'mission_configs.json').write_text(json.dumps(configs,indent=2))
- files=[Path(__file__),original]+list(OUT.glob('*.py'))+list(OUT.glob('*.csv'))+list(OUT.glob('*.json'))+list((OUT/'inputs').glob('*'))+list(OUT.glob('*.npz'))
- (OUT/'manifest.json').write_text(json.dumps({'command':'python review_work/v13_experiments.py','N':256,'initial_stock_hours':12,'stock_source_debit':'proportional debit from first 12 hours of nominal source budgets','scenario':'geometric lower-bound link lengths and times','seed_scenario':'10000+s','seed_process':'20000+100*s+1','files':{str(f.relative_to(ROOT)):hashlib.sha256(f.read_bytes()).hexdigest() for f in files}},indent=2))
+ files=[Path(__file__),original,model]+list(OUT.glob('*.csv'))+list(OUT.glob('*.json'))+list((INPUT).glob('*'))+list(OUT.glob('*.npz'))
+ (OUT/'manifest.json').write_text(json.dumps({'command':'python code/v13_experiments.py','N':256,'initial_stock_hours':12,'stock_source_debit':'proportional debit from first 12 hours of nominal source budgets','scenario':'geometric lower-bound link lengths and times','seed_scenario':'10000+s','seed_process':'20000+100*s+1','files':{str(f.relative_to(ROOT)):hashlib.sha256(f.read_bytes()).hexdigest() for f in files}},indent=2))
  print(pd.DataFrame(summaries).to_string(index=False),flush=True)

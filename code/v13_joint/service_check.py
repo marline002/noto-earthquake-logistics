@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys,json,os
-ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'data'))
+ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'code'))
 os.environ['NOTO_REVISION_OUTPUT']='v13_joint_20261107'
 import run_v13_structure as r
 import numpy as np

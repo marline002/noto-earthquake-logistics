@@ -6,7 +6,7 @@ import numpy as np,pandas as pd,json,hashlib,sys
 from scipy.optimize import linprog
 from concurrent.futures import ProcessPoolExecutor
 import v13_experiments as x
-R=Path(__file__).resolve().parents[1];OUT=R/'data/v13_lp_20261107';OUT.mkdir(exist_ok=True)
+R=Path(__file__).resolve().parents[1];OUT=R/'result/v13_lp_20261107';OUT.mkdir(exist_ok=True)
 def job(args):
  task,s,policy=args;w=x.load()
  if task=='immediate':w.load_data(R/'data/v13_joint_20261107/inputs')
@@ -61,6 +61,6 @@ if __name__=='__main__':
   for ep,col,op in [('sys','Y_min',lambda z:z>=.5),('dc','psi_max',lambda z:z<=.2)]:
    av=op(a[col].to_numpy());bv=op(b[col].to_numpy());d,l,u,p,q=x.interval(av,bv);sums.append(dict(task=task,endpoint=ep,R_LP=av.mean(),R_heuristic=bv.mean(),delta=d,lo=l,hi=u,n10=p,n01=q))
  pd.DataFrame(sums).to_csv(OUT/'summary.csv',index=False)
- files=[Path(__file__),R/'data/v13_20261107/v13_model.py']+list(OUT.glob('*.csv'))
+ files=[Path(__file__),R/'code/v13_model.py']+list(OUT.glob('*.csv'))
  (OUT/'manifest.json').write_text(json.dumps({'N':256,'objective':'maximize planned interval departures over all capacity-positive paths in current request ledger, including zero request weights; component, destination-request and source-budget bounds; retain original requested-load driver','heuristic_feasibility_check':'Every epoch checks heuristic support belongs to LP paths and every LP inequality on heuristic path-flow vector, in addition to LP feasibility and objective dominance','files':{str(p.relative_to(R)):hashlib.sha256(p.read_bytes()).hexdigest() for p in files}},indent=2))
  print(pd.DataFrame(sums).to_string(index=False),flush=True)

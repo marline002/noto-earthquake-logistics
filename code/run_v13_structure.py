@@ -15,8 +15,9 @@ import pandas as pd
 from scipy.stats import qmc, norm
 
 BASE=Path(__file__).resolve().parent
-OUT=BASE/os.environ.get('NOTO_REVISION_OUTPUT','v13_structure_20261107')
-INPUT=OUT/'inputs'
+DATA=BASE.parent/'data'/'noto_data'
+OUT=BASE.parent/'result'/os.environ.get('NOTO_REVISION_OUTPUT','v13_structure_20261107')
+INPUT=BASE.parent/'data'/OUT.name/'inputs'
 MODEL=BASE/'v13_core.py'
 spec=importlib.util.spec_from_file_location('noto_revision',MODEL)
 w=importlib.util.module_from_spec(spec)
@@ -24,9 +25,9 @@ spec.loader.exec_module(w)
 
 def prepare_inputs():
     INPUT.mkdir(parents=True,exist_ok=True)
-    nodes=pd.read_csv(BASE/'noto_data/nodes_noto.csv')
-    links=pd.read_csv(BASE/'noto_data/links_noto.csv')
-    pop=pd.read_csv(BASE/'noto_data/population_demand_noto.csv')
+    nodes=pd.read_csv(DATA/'nodes_noto.csv')
+    links=pd.read_csv(DATA/'links_noto.csv')
+    pop=pd.read_csv(DATA/'population_demand_noto.csv')
     pos=nodes.set_index('node')[['lon','lat']].to_dict('index')
     audit=[]
     for idx,row in links.iterrows():
@@ -40,7 +41,7 @@ def prepare_inputs():
                           great_circle_km=dist,scenario_length_km=length,
                           original_time_h=row.travel_time_h,scenario_time_h=links.loc[idx,'travel_time_h']))
     if os.environ.get('NOTO_REVISION_MODE','csv') == 'csv':
-        links=pd.read_csv(BASE/'noto_data/links_noto.csv')
+        links=pd.read_csv(DATA/'links_noto.csv')
     nodes.to_csv(INPUT/'nodes_noto.csv',index=False)
     links.to_csv(INPUT/'links_noto.csv',index=False)
     pop.to_csv(INPUT/'population_demand_noto.csv',index=False)
@@ -68,7 +69,7 @@ def task(job):
         proc_seed=np.random.SeedSequence([20261029,batch,point,rep,202])
         beta=b;kw.update(gamma_mult=g,m_shift=m,delta_mult=d)
     if source:
-        w.load_data(BASE/'noto_data')
+        w.load_data(DATA)
     result=w.simulate_cell(kw.pop('pi','split'),kw.pop('m','soft'),
         w.sample_scenario(np.random.default_rng(scen_seed),beta),
         np.random.default_rng(proc_seed),**kw)
@@ -249,19 +250,19 @@ def gsa_stage(workers,base=32,budgets=(32,128)):
 
 def metadata():
     import scipy,networkx
-    paths=[MODEL,Path(__file__)]+list(INPUT.glob('*.csv'))+list((BASE/'noto_data').glob('*.csv'))
+    paths=[MODEL,Path(__file__)]+list(INPUT.glob('*.csv'))+list((DATA).glob('*.csv'))
     doc=dict(date='2026-11-07',python=platform.python_version(),numpy=np.__version__,pandas=pd.__version__,
         scipy=scipy.__version__,networkx=networkx.__version__,component_order=w.COMPONENTS,
         ordinary_seeds=dict(scenario='10000+s',process='20000+100*s+1'),
         calibration_seeds='SeedSequence([999,101,s]), SeedSequence([999,202,s]), endpoint SeedSequence([999,991])',
         gsa_seeds='SeedSequence([20261029,batch,point,rep,101 or 202]); independent across points',
-        hash_sha256={str(p.relative_to(BASE)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths})
+        hash_sha256={str(p.relative_to(BASE.parent)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths})
     (OUT/'metadata.json').write_text(json.dumps(doc,indent=2))
 
 def figures_stage(figure_dir=None):
     """Recreate publication plots from saved records; never rerun simulations.
 
-    Example: python data/run_v13_structure.py --stage figures
+    Example: python code/run_v13_structure.py --stage figures
     Uses --output-dir as the saved-result directory. PDF and PNG exports go
     to --figure-dir (default: figs/v13_structure). Also exports the CV
     diagnostic and a Python reconstruction of the closed-loop schematic.
@@ -277,8 +278,9 @@ def figures_stage(figure_dir=None):
     FIG.mkdir(parents=True, exist_ok=True)
     required = ['main_summary.json', 'sweeps_summary.json', 'main_replicates.csv',
                 'robust_replicates.csv', 'main_arrays.npz', 'robust_arrays.npz',
-                'metadata.json', 'inputs/nodes_noto.csv', 'inputs/links_noto.csv']
+                'metadata.json']
     missing = [str(OUT/name) for name in required if not (OUT/name).is_file()]
+    missing += [str(INPUT/name) for name in ['nodes_noto.csv','links_noto.csv'] if not (INPUT/name).is_file()]
     if missing:
         raise FileNotFoundError('Missing saved figure inputs:\n' + '\n'.join(missing))
     def load(name):
@@ -309,7 +311,7 @@ def figures_stage(figure_dir=None):
         plt.close(fig)
     # Figure contract: show conditional model comparisons with source records and
     # keep confidence intervals distinct from inter-realization dispersion.
-    nodes=pd.read_csv(OUT/'inputs/nodes_noto.csv');links=pd.read_csv(OUT/'inputs/links_noto.csv')
+    nodes=pd.read_csv(INPUT/'nodes_noto.csv');links=pd.read_csv(INPUT/'links_noto.csv')
     fig,ax=plt.subplots(figsize=(6.4,5.1),layout='constrained')
     pos=nodes.set_index('node')
     for r in links.itertuples():
@@ -435,8 +437,8 @@ if __name__=='__main__':
     args=parser.parse_args()
     os.environ['NOTO_REVISION_OUTPUT']=args.output_dir
     os.environ['NOTO_REVISION_MODE']=args.input_mode
-    OUT=BASE/args.output_dir
-    INPUT=OUT/'inputs'
+    OUT=BASE.parent/'result'/args.output_dir
+    INPUT=BASE.parent/'data'/OUT.name/'inputs'
     if args.stage=='figures':
         figures_stage(args.figure_dir)
         sys.exit(0)

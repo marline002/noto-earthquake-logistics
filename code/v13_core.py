@@ -47,8 +47,8 @@ from scipy.special import gammaincinv
 from scipy.stats import binomtest, gamma as _gamma_dist, norm, beta as beta_dist
 
 BASE = Path(__file__).resolve().parent
-DATA = BASE / "noto_data"
-FIGDIR = BASE / "noto_results"
+DATA = BASE.parent / "data" / "noto_data"
+FIGDIR = BASE.parent / "result" / "noto_results"
 DEFAULT_CV, DEFAULT_DT, DEFAULT_DT_D = 0.25, 3.0, 1.0
 Y_CRIT, PSI_CRIT, T, EPS, K, N_MC = 0.50, 0.20, 72.0, 1e-6, 6, 1000
 REFERENCE_HOURS = 3.0

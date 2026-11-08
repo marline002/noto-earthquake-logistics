@@ -6,7 +6,6 @@ revision_20261029/
 revision_20261029_csv/
 noto_results/
 smoke_results/
-figs/
 *.zip
 *.aux
 *.bbl

@@ -1,0 +1,23 @@
+{
+  "N": 256,
+  "objective": "maximize planned interval departures over all capacity-positive paths in current request ledger, including zero request weights; component, destination-request and source-budget bounds; retain original requested-load driver",
+  "heuristic_feasibility_check": "Every epoch checks heuristic support belongs to LP paths and every LP inequality on heuristic path-flow vector, in addition to LP feasibility and objective dominance",
+  "files": {
+    "code/v13_lp_benchmark.py": "9aa813e3cef0853437de778d4f58c43265ca714870d9fa42eba1c7df255f0563",
+    "code/v13_model.py": "c13dd2639d951c8fd2f3242b65e97d5a71241859e47105a18538f22f46322981",
+    "result/v13_lp_20261107/epoch_gaps.csv": "18e08c7e17a07753ec34de523f8c48077ef5ce646c8d5b18b342a9c1b383db45",
+    "result/v13_lp_20261107/replicates.csv": "b623a33790cd1b16dd4e7700528b1093d849e81dc22587adf7c463472d775ee8",
+    "result/v13_lp_20261107/summary.csv": "91f285c17afc7e1f12392fb325c1391af30050b3fb518939cd2c53f057d0867b",
+    "code/v13_experiments.py": "a905e708a93786c117d1c73496f33d808f7951b0e04f7a7ec61dc20e9d079639",
+    "data/v13_joint_20261107/inputs/links_noto.csv": "bcc7664e5c496ac5a148fd57111a55e239d439d39272fd0016ec20e32473ed3e",
+    "data/v13_joint_20261107/inputs/nodes_noto.csv": "c89354f72966f300cec46d9d507843ac532cdcbb7554578b6b26e04006f0e04d",
+    "data/v13_joint_20261107/inputs/population_demand_noto.csv": "b400c5f6cde132737fc8d9d0a7011f9704de33bf47a3766be9102e051e68a763",
+    "data/v13_20261107/inputs/links_noto.csv": "3b411812f9c9c2ebe843626eb4c8aa1240ba79332bf233516bb0b7ef7dc9e31a",
+    "data/v13_20261107/inputs/nodes_noto.csv": "c89354f72966f300cec46d9d507843ac532cdcbb7554578b6b26e04006f0e04d",
+    "data/v13_20261107/inputs/population_demand_noto.csv": "b400c5f6cde132737fc8d9d0a7011f9704de33bf47a3766be9102e051e68a763"
+  },
+  "input_dependencies": {
+    "immediate": "data/v13_joint_20261107/inputs/",
+    "mission": "data/v13_20261107/inputs/"
+  }
+}
